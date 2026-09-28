@@ -34,9 +34,13 @@
 
 Use only article-level OA-eligible material with source identifier, license text, retrieval date, and SHA-256 in a manifest. Do not assume that a PMC record implies identical reuse rights. Restricted, missing-license, or ambiguous material is excluded or retained only as an external identifier without text.
 
-## Can the benchmark realistically be constructed?
+## Milestone 1 audit results
 
-**Preliminary answer: CONDITIONAL.** The ingredients exist, but neither candidate source is sufficient alone. A defensible v0.1 is realistic if Milestone 1 can establish: (a) stable review/study and trial-family identities, (b) deterministic parent/perturbation relationships, (c) an explicit answerability contract, (d) auditable labels derived from source structure and controlled transformations, and (e) legal text provenance. If trial-family identity or label semantics fail, narrow to a study-level evidence-adequacy benchmark and do not claim a full systematic-review benchmark.
+The official EI v2.0 archive was acquired and inspected. It contains 24,686 annotation rows, 24,321 valid-label rows, 12,865 unique prompts, 3,372 PMCIDs, and disjoint article-level train/validation/test files with 3,562/443/449 IDs. PMCID is available; DOI, trial-registration, and trial-family fields are absent. The current archive also contains 619 valid rows with `significantly increase`, inconsistent with the documented `significantly increased`; these were excluded from the prototype.
+
+The official MS² sample contains one review with 20 included reports, all with PMIDs but no DOIs or trial-registration identifiers. Its significance fields are not treated as verified gold cross-study direction labels. The larger MSLR2022 archive is documented as approximately 253 MB and approximately 20K reviews/470K studies, but was not downloaded during this bounded milestone.
+
+**Data Structure Gate:** FAIL for the original full benchmark; CONDITIONAL for a narrowed study-level track. The current sources do not support verified trial-family grouping or deterministic multi-study conflict labels.
 
 ## Required manifest fields
 

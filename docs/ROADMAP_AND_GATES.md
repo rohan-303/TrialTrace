@@ -27,9 +27,11 @@ The sequence is retained. The only scope modification is that Milestone 1 must c
 | Reproducibility | Fresh rerun, manifests, hashes, configs, and immutable outputs verify | Do not freeze/release |
 | Publication | One load-bearing contribution survives all above gates | Do not force a paper claim |
 
-## Compute plan
+## Milestone 1 decision
 
-Milestone 0–1: local CPU for repository checks, metadata inspection, schema profiling, hashing, and tiny deterministic tests. Do not use the remote server yet.
+Milestone 1 executed a bounded EI feasibility prototype and closed the current branch as **REDESIGN_REQUIRED**. Do not begin Milestone 2. The minimum next step is a new data/label feasibility design that supplies audited multi-study compatible evidence and trial-family identities; otherwise narrow the project to study-level sufficiency/abstention and drop conflict/duplicate claims.
+
+Milestone 0–1 compute: local CPU only for repository checks, metadata inspection, schema profiling, hashing, and deterministic tests. No remote GPU use was needed.
 
 Milestone 2 onward: use the authorized dual-RTX-4090 SSH server only after environment inspection and explicit compute authorization. Use one GPU unless parallelism is justified; record GPU/CUDA/model/precision/batch/memory metadata. Keep local repository authoritative, transfer only manifest-listed files, hash-check results on return, and delete only the user-created remote workspace. Never transfer credentials, private keys, restricted raw data, or model caches.
 

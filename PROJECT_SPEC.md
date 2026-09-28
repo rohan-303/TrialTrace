@@ -1,8 +1,8 @@
 # TrialTrace Project Specification
 
 **Working title:** TrialTrace: Risk-Controlled Clinical Evidence Synthesis Under Missing, Conflicting, and PICO-Incompatible Evidence
-**Milestone:** 0 — Research Specification and Novelty Kill-Test
-**Status:** Foundation/Idea; no benchmark, model, or scientific result has been executed.
+**Milestone:** 1 — Novelty Closure, Data Feasibility, and Benchmark Prototype
+**Status:** REDESIGN_REQUIRED; no model training or expensive experiments authorized.
 **Specification date:** 2026-09-28 (US/Eastern)
 
 ## 1. Scientific question

@@ -4,7 +4,7 @@ TrialTrace studies whether clinical evidence-synthesis systems know when an evid
 
 ## Current status
 
-**Milestone 0 — Foundation/Idea.** The repository contains the research specification and kill-test documentation only. No dataset, model, benchmark, or scientific result has been executed.
+**Milestone 1 — REDESIGN_REQUIRED.** The data feasibility prototype executed successfully, but the current sources do not support the full multi-study TrialTrace benchmark. No model, training, or expensive experiment has been run.
 
 ## Core decision
 

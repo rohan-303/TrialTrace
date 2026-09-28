@@ -1,0 +1,58 @@
+{
+  "ms2_sample": {
+    "review_count": 1,
+    "included_study_groups": 20,
+    "included_reports": 20,
+    "review_id": "29843175",
+    "review_pmid": 16801507,
+    "review_doi_present": false,
+    "report_pmids": 20,
+    "report_dois": 0,
+    "trial_registration_identifiers": 0,
+    "effect_labels_are_gold": false,
+    "effect_label_note": "sample includes significance probability/evidence fields, not a verified gold cross-study direction table"
+  },
+  "evidence_inference_2": {
+    "annotation_rows": 24686,
+    "valid_annotation_rows": 24321,
+    "unique_prompt_ids": 12865,
+    "unique_article_pmcids": 3372,
+    "label_counts_valid": {
+      "no significant difference": 11007,
+      "significantly increased": 6870,
+      "significantly decreased": 5825,
+      "significantly increase": 619
+    },
+    "prompt_rows_per_article_max": 72,
+    "article_ids_with_nct_or_trial_registration": 0,
+    "pmcid_present": true,
+    "doi_field_present": false,
+    "trial_family_field_present": false,
+    "split_counts": {
+      "train_article_ids.txt": 3562,
+      "validation_article_ids.txt": 443,
+      "test_article_ids.txt": 449
+    },
+    "split_intersections": {
+      "train_article_ids.txt__validation_article_ids.txt": 0,
+      "train_article_ids.txt__test_article_ids.txt": 0,
+      "validation_article_ids.txt__test_article_ids.txt": 0
+    }
+  },
+  "prototype": {
+    "clean_instances": 64,
+    "omission_instances": 64,
+    "unique_question_ids": 64,
+    "unique_article_ids": 6,
+    "trial_family_ids_available": 0,
+    "review_ids_available": 0,
+    "supported_perturbations": [
+      "RANDOM_EVIDENCE_OMISSION"
+    ],
+    "unsupported_perturbations": [
+      "DIRECTIONAL_CONTRADICTION",
+      "PICO_NEAR_DISTRACTOR",
+      "DUPLICATE_REPORT"
+    ]
+  }
+}

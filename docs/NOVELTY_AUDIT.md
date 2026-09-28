@@ -61,3 +61,59 @@ This is a benchmark/evaluation contribution first. A new adequacy model is not j
 - MedSR-Copilot official repository: https://github.com/MAGIC-AI4Med/MedSR-Copilot; README and linked MedSR-Bench card: https://huggingface.co/datasets/halfmorepiece/MedSR-Bench.
 
 The MedSR-Copilot paper identity, benchmark card, LEADS identity, and the full selective-RAG/provenance literature map remain **open/partially verified**, not negative findings.
+
+## Milestone 1 closure update
+
+**Novelty Closure Gate: CONDITIONAL / REDESIGN REQUIRED.**
+
+The central framing remains differentiated enough to justify a narrowed benchmark study, but the current data cannot instantiate the full contribution. The bounded audit supports this cautious statement:
+
+> The inspected closest systems establish medical review workflow automation, study-level extraction, citation-backed scientific synthesis, or contradiction discovery. The exact combination of deterministic clinical evidence-set corruption, explicit `SYNTHESIZE / CONFLICT / ABSTAIN` semantics, trial-family leakage controls, and selective risk–coverage evaluation was not found in the bounded primary-source audit. This is an unresolved gap, not a proof of novelty.
+
+MedSR-Copilot/MedSR-Bench is a direct overlap threat, but its public Hugging Face dataset currently states that it is empty and its repository README marks the paper as “coming soon.” This weakens—but does not eliminate—the threat.
+
+### Final overlap matrix
+
+Legend: **E** = established/explicit; **P** = partial or adjacent; **U** = unresolved/not verified; **—** = not the primary object.
+
+| Work / direction | Multi-study clinical synthesis | Review vs study | PICO | Provenance | Effect direction | Conflict | Missing evidence | PICO mismatch | Duplicate reports | Answerability | Abstention | Selective risk | Deterministic corruption | Trial-family control | Trajectories |
+|---|---:|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| **TrialTrace target** | E | both | E | E | E | E | E | E | E | E | E | E | E | E | P |
+| MedSR-Copilot / MedSR-Bench | E | review/workflow | E | E | P | P | U | P | U | U | U | U | U | U | E |
+| TrialMind / TrialReviewBench | E | review/workflow | E | P | P | — | — | P | U | — | — | — | — | U | P |
+| OpenScholar / ScholarQABench | P | mixed QA | P | E | — | P | — | — | — | — | — | P | — | — | P |
+| PaperQA2 / LitQA2 | P | literature QA | P | E | — | E | — | — | — | — | — | P | — | — | E |
+| Evidence Inference 2.0 | — | study-level | E | E | E | — | — | — | — | — | — | — | — | — | — |
+| MS² / MSLR2022 | E | review-level | P | P | U | — | — | — | — | — | — | — | — | U | — |
+| selective RAG / abstention | P | usually QA | P | P | — | P | P | P | — | P | E | E | P | — | P |
+| provenance-aware scientific QA | P | literature QA | P | E | — | P | P | P | — | P | P | P | P | — | P |
+
+This matrix is a design audit, not an exhaustive systematic review.
+
+### Findings by contribution dimension
+
+**Established:** medical systematic-review workflow automation; citation-backed scientific synthesis; contradiction discovery; study-level intervention/comparator/outcome direction and evidence spans; abstention and risk–coverage methodology.
+
+**Incremental alone:** adding a `CONFLICT` label; adding provenance/evidence spans; combining MS² and Evidence Inference; listing omission/mismatch perturbations without non-trivial labels and trial identities.
+
+**Apparently underexplored:** a source-grounded medical benchmark where deterministic evidence-set corruption requires synthesize/conflict/abstain decisions, evaluated by whole-set selective risk and explicitly separated report/trial-family identity. These are potentially novel benchmark directions, not confirmed novelty.
+
+**Uncertain:** hidden MedSR-Bench task semantics; recent 2025–2026 systems outside the inspected endpoints; the exact intended LEADS work; availability of legally usable multi-study trial-linked data.
+
+### Source-backed closure record
+
+- MedSR-Copilot repository: https://github.com/MAGIC-AI4Med/MedSR-Copilot (README accessed 2026-09-28).
+- MedSR-Bench public dataset page: https://huggingface.co/datasets/halfmorepiece/MedSR-Bench (currently empty, accessed 2026-09-28).
+- TrialMind / TrialReviewBench: https://arxiv.org/abs/2406.17755.
+- OpenScholar / ScholarQABench: https://arxiv.org/abs/2411.14199.
+- PaperQA2 / LitQA2: https://arxiv.org/abs/2409.13740.
+- Evidence Inference 2.0 and official download page: https://arxiv.org/abs/2005.04177 and https://evidence-inference.ebm-nlp.com/download/.
+- MS² / MSLR2022: https://github.com/allenai/ms2 and https://github.com/allenai/mslr-shared-task.
+- LEADS: exact identity unresolved; no substantive claims are made.
+
+### Minimum redesign
+
+1. Treat the EI prototype as a data/engineering feasibility probe only.
+2. Do not claim multi-study conflict, duplicate-report, or PICO-distractor support until independent trial-family and compatibility relations are obtained.
+3. Add an auditable source or human-verified subset with compatible multi-study evidence units and underlying trial identity.
+4. If that source cannot be obtained, narrow the project to study-level evidence sufficiency/abstention and explicitly drop conflict and duplicate-family claims.

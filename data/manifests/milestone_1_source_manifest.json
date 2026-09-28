@@ -1,0 +1,60 @@
+{
+  "retrieval_date": "2026-09-28",
+  "sources": [
+    {
+      "name": "MS2 sample",
+      "url": "https://raw.githubusercontent.com/allenai/ms2/master/sample.json",
+      "license_reference": "https://github.com/allenai/ms2/blob/master/README.md"
+    },
+    {
+      "name": "Evidence Inference 2.0",
+      "url": "https://evidence-inference.ebm-nlp.com/v2.0.tar.gz",
+      "license_reference": "https://github.com/jayded/evidence-inference/blob/master/LICENSE"
+    }
+  ],
+  "files": [
+    {
+      "path": "data/raw/ms2/sample.json",
+      "bytes": 912289,
+      "sha256": "3289e4eb677b171398a69f24bc29beb6b93ab30966509851d87e2ac6afe785fd",
+      "git_tracked": false
+    },
+    {
+      "path": "data/raw/ms2/README.md",
+      "bytes": 7446,
+      "sha256": "fbf6b169efed73a4166e3eb2b7080d774f7e3207aae0e8389282968353b2be8d",
+      "git_tracked": false
+    },
+    {
+      "path": "data/raw/evidence_inference/README.md",
+      "bytes": 5780,
+      "sha256": "579cf84b8515433993a9f83142cee1f755720def256b989b267a573f64590ef0",
+      "git_tracked": false
+    },
+    {
+      "path": "data/raw/evidence_inference/README.annotation_process.md",
+      "bytes": 6363,
+      "sha256": "cd9746e4d987403fa1080a071280c55fa86b0d617e3b011935a964ad6ddcf0ba",
+      "git_tracked": false
+    },
+    {
+      "path": "data/raw/evidence_inference/v2.0.tar.gz",
+      "bytes": 36528800,
+      "sha256": "6abe0d4ec0d331834981c0171c3c79d47515761867f82f1dc6066e43863a1586",
+      "git_tracked": false
+    },
+    {
+      "path": "data/interim/evidence_inference_v2/annotations_merged.csv",
+      "bytes": 6457296,
+      "sha256": "9613dc86157743794d68f6b8bd8fa65cf763214d6055a27e6695b4229de0039e",
+      "git_tracked": false
+    },
+    {
+      "path": "data/interim/evidence_inference_v2/prompts_merged.csv",
+      "bytes": 1498509,
+      "sha256": "0d70d9e1e78d113fdbbd4919310eab7768d6a328368f7d8f9d5a3b48f99c25d3",
+      "git_tracked": false
+    }
+  ],
+  "raw_data_policy": "raw and derived clinical text are excluded from Git; compact manifests and code may be committed"
+}

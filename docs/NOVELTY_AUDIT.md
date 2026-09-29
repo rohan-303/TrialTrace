@@ -127,3 +127,15 @@ TrialReviewBench was downloaded and measured at 100 review records, 2,220 includ
 **Updated novelty statement:** a report-level benchmark for deterministic evidence-set perturbation and selective answerability may remain conditionally differentiated from TrialReviewBench, but the stronger claim involving audited independent trial families, duplicate-publication perturbations, and trial-family leakage control is not supported. No three-way labels, counterfactual pairs, or rescued prototype were generated in Milestone 1R.
 
 Source audit artifact: `artifacts/milestone_1r/20260929_source_rescue/trialreviewbench_audit.json` (ignored local artifact).
+
+## Milestone 1S novelty reset and closure
+
+The candidate formulation was narrowed to paired review-level conclusion stability under controlled evidence-set perturbation. Three closer threats were explicitly added:
+
+- **Evidence Sufficiency Benchmark**, Zhang and Wu, DOI `10.32604/cmc.2026.086343`: evaluates full, partial, irrelevant, absent, and conflicting evidence with answer/abstain behavior, evidence-sufficiency curves, and over-answering. Generic evidence sufficiency, abstention, and selective calibration are not TrialTrace novelty.
+- **MetaSyn**, arXiv `2606.17041`: provides expert-curated meta-analyses, PI/ECO criteria, included studies, hard negatives, PubMed-linked corpora, and stage-wise retrieval/screening/synthesis evaluation. PICO-aware retrieval and hard-negative screening are not sufficient novelty.
+- **An auditable evidence compiler for large language model-assisted systematic reviews**, Yin, Jing, and Zhang, DOI `10.64898/2026.09.21.26363538`: links evidence identities, populations, outcomes, statistical roles, dependence/overlapping participants, corrections, supersession, deterministic statistics, terminal refusal states, and auditable releases. Provenance and deterministic compilation alone are not sufficient novelty.
+
+TrialMind/TrialReviewBench, MedSR-Copilot/MedSR-Bench, and recent numerical meta-analysis extraction benchmarks remain adjacent or direct workflow threats. The counterfactual object is conceptually distinct, but the Milestone 1S source audit found only three strict quantitative review/outcome units, 28 parseable HR records, zero leave-one-out transitions, and one non-preserving multi-report pair. A report-count rule perfectly identified the only transition. The candidate therefore fails the non-triviality and counterfactual gates, and no positive novelty claim is retained.
+
+**Milestone 1S novelty result: CONDITIONAL in concept, FAIL as an executable benchmark on the frozen source. Master project decision: `TRIALTRACE_STOP`.**

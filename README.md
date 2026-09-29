@@ -4,11 +4,11 @@ TrialTrace studies whether clinical evidence-synthesis systems know when an evid
 
 ## Current status
 
-**Milestone 1R — PARTIAL_REDESIGN_REQUIRED.** TrialReviewBench provides a report-level review/question backbone, but ED-Trials trial-family linkage was not auditable at benchmark scale. No TrialTrace v0.2 labels, model, training, or expensive experiment has been run.
+**Milestone 1S — TRIALTRACE_STOP.** The final conclusion-stability kill-test found only three strict quantitative review/outcome units, one non-preserving counterfactual, and a perturbation-size shortcut that perfectly identified the only transition. No TrialTrace model, training, or expensive experiment was run.
 
 ## Core decision
 
-For a question `q` and evidence set `E`, evaluate `SYNTHESIZE`, `CONFLICT`, or `ABSTAIN` under controlled evidence-set shifts.
+The final tested formulation was paired review-level conclusion stability under controlled evidence-set shifts. It was stopped because the available TrialReviewBench release could not support a non-trivial benchmark.
 
 ## Repository rules
 

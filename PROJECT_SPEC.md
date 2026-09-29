@@ -1,8 +1,8 @@
 # TrialTrace Project Specification
 
 **Working title:** TrialTrace: Risk-Controlled Clinical Evidence Synthesis Under Missing, Conflicting, and PICO-Incompatible Evidence
-**Milestone:** 1R — Multi-Study Data and Label Rescue Test
-**Status:** PARTIAL_REDESIGN_REQUIRED; no model training or expensive experiments authorized.
+**Milestone:** 1S — Review-Level Conclusion Stability Kill-Test
+**Status:** TRIALTRACE_STOP; no model training or expensive experiments authorized.
 **Specification date:** 2026-09-29 (US/Eastern)
 
 ## 1. Scientific question
@@ -97,6 +97,10 @@ Every system comparison must record model revision, corpus, retrieval budget, co
 
 TrialTrace will not claim clinical safety, treatment efficacy, universal distribution-free guarantees, superiority over clinicians, or that conformal prediction remains guaranteed under intentional evidence-set shift. If conformal methods are later used, calibration distribution, exchangeability assumptions, and empirical degradation must be reported separately.
 
-## 11. Continuation decision
+## 11. Milestone 1S closure
+
+The Milestone 1S audit tested a strict hazard-ratio subset of TrialReviewBench. It found three review/outcome units and one non-preserving multi-report omission pair. Leave-one-report-out perturbations produced no transitions, while a five-report omission produced the only transition and was perfectly identified by a perturbation-size rule. The quantitative, counterfactual, and non-triviality gates therefore fail. The current TrialTrace direction is stopped; no method-development milestone is authorized.
+
+## 12. Continuation decision
 
 Milestone 0 ends with a conditional recommendation only if novelty and data gates survive source-backed review. Milestone 1 may begin only after external review of this specification and the Milestone 0 report. No full implementation, large data acquisition, model download, training, or GPU use is authorized by this document.

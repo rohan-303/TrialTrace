@@ -46,6 +46,12 @@ The official MS² sample contains one review with 20 included reports, all with 
 
 `source_name`, `source_version`, `source_url`, `download_date`, `license_url`, `license_status`, `raw_filename`, `sha256`, `pmid`, `doi`, `trial_registration_id`, `review_id`, `study_id`, `trial_family_id`, `document_type`, `pico_fields`, `effect_direction`, `evidence_span_ids`, `parent_set_id`, `perturbation_type`, `seed`, `split`, `eligibility_status`, `notes`.
 
-## Provisional labels
+## Milestone 1R source-rescue closure
 
-Do not construct labels from generated prose. Candidate deterministic labels must be defined from compatible study metadata, direction/effect annotations, source-set membership, and perturbation operations. Ambiguous instances are a separate `UNRESOLVED` pool and must not be forced into the three-way target.
+TrialReviewBench was acquired from the pinned Hugging Face main revision `6dfc322004341212eb905a6874ccfae416b9f9f5`. The inspected release contains 100 review rows, 2,220 included citation records, 2,132 PMID-bearing records, 25 DOI-bearing records, 11 NCT-bearing records, 23 heterogeneous extraction CSVs, and 632 extraction rows. Its dataset card declares Apache-2.0, but underlying article text remains subject to source-specific rights and is not copied into Git.
+
+The legacy Epistemonikos API documents review/document/matrix/studies-thread endpoints but requires a registered access token; direct unauthenticated document and thread requests returned HTTP 401. The current ED-Trials frontend exposes a public references-search endpoint and thread fields, but no documented, pinned bulk linkage/export contract was established. Therefore ED-Trials mapping, thread assignment, and manual thread validation are `NOT COMPUTED`, not zero.
+
+The conditional v0.2 hierarchy is review/question → included reports → auditable trial families → outcomes. Report PMIDs/DOIs/registry IDs must not be treated as trial-family identity. No `trial_family_id`, three-way labels, or rescued prototype was generated in this milestone. A future narrow track may use report-level perturbations and structured review-result preservation, but it must drop independent-trial conflict and duplicate-publication claims unless a human-verified subset is separately authorized.
+
+Candidate deterministic labels remain an `UNRESOLVED` pool until a common outcome contract and matched counterfactuals are frozen. Do not use an LLM as the sole label oracle.

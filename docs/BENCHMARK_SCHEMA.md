@@ -1,27 +1,71 @@
-# Canonical TrialTrace prototype schema v0.1
+# TrialTrace benchmark schema status
 
-## Status
+## Milestone 1R result
 
-This is an executed **study-level feasibility schema**, not a frozen multi-study benchmark schema. It intentionally preserves unavailable relationships as `null`.
+The rescued multi-study schema is **not instantiated**. TrialReviewBench provides review/question records and included publication records, while the public ED-Trials interface exposes trial/publication metadata and thread concepts. A reproducible cross-source trial-family graph was not frozen because the legacy Epistemonikos API requires a registered access token and the current public frontend API did not expose a documented bulk export or stable thread endpoint during this milestone.
 
-## One JSONL object
+The schema below is therefore a **conditional contract**, not a generated benchmark and not evidence that the sources can be joined at scale.
 
-- `instance_id`: SHA-256 of the canonical instance payload excluding the ID.
-- `question_id`: Evidence Inference prompt identity.
-- `question`: rendered intervention/comparator/outcome question.
-- `review_id`: review identifier; `null` in the EI-only prototype.
-- `trial_family_id`: underlying-trial identity; `null` because the source has no trial-family field.
-- `report_id`: source report identifier, currently `pmcid:<id>`.
-- `article_id`: PMCID-qualified article identity.
-- `pico`: object with `population`, `intervention`, `comparator`.
-- `outcome_identity`: source prompt outcome string; no normalization is applied.
-- `effect_direction`: `INCREASED`, `DECREASED`, or `NO_DIFFERENCE`, derived from valid EI annotations by deterministic majority with lexical tie-break.
-- `evidence_spans`: annotation-derived evidence offsets and text.
-- `provenance`: source name, PMCID, PromptID, annotation count, and label rule.
-- `evidence_set`: report IDs visible to the instance.
-- `perturbation`: type, seed, parent, removed reports, and semantic rationale.
-- `expected_decision`: `SYNTHESIZE` for a valid clean one-report instance; `ABSTAIN` after sole-report omission.
+## Conditional canonical hierarchy
 
-## Explicit limitations
+```text
+review_question
+  review_id
+  question_id
+  source_review_identifiers[]
+  pico
+  included_trial_families[]
+    trial_family_id
+    identity_status
+    reports[]
+      report_id
+      pmid
+      pmcid
+      doi
+      registry_ids[]
+      source
+      source_revision
+      provenance
+    outcomes[]
+      outcome_id
+      normalized_name
+      source_name
+      effect_direction
+      effect_estimate
+      uncertainty
+      evidence_source
+```
 
-The prototype cannot represent a defensible `CONFLICT` label because it does not contain multiple independently identified compatible trial families for one PICO question. It cannot represent duplicate-report perturbations because no trial-family identifiers are present. It cannot create a valid PICO distractor without an externally audited compatibility relation. These are recorded as unsupported, not guessed.
+## Required identity distinctions
+
+- `report_id` identifies a publication or registry record, never automatically an underlying trial.
+- `trial_family_id` may be assigned only from an explicit source relationship or an auditable human-verified linkage record.
+- A publication thread is a candidate trial-family proxy, not automatically a ground-truth trial family. Protocols, preliminary reports, final reports, subgroup analyses, and follow-ups must be audited before use.
+- `review_id` and `question_id` are distinct: one review may contain multiple evidence questions or outcomes.
+- Every derived relationship carries source, revision, retrieval time, transformation, and confidence/status provenance.
+
+## Semantics required for a future benchmark
+
+`D(q,E) ∈ {SYNTHESIZE, CONFLICT, ABSTAIN}` must be derived from a frozen evidence contract, not from document count or an LLM judgment.
+
+- `SYNTHESIZE`: compatible, independently supported trial-family evidence satisfies the contract and preserves the benchmark conclusion.
+- `CONFLICT`: compatible independent trial families support materially different directions or conclusions under the same outcome/PICO contract.
+- `ABSTAIN`: evidence is present but fails the contract because of missing decisive families, PICO incompatibility, duplicate-only support, insufficient independent support, or another explicitly recorded reason.
+- `UNRESOLVED`: identity, compatibility, or outcome semantics are not auditable. Unresolved instances must be excluded from the three-way target rather than forced into a label.
+
+## Current available schemas
+
+### TrialReviewBench
+
+- `reviews.csv`: 100 review records with `PMID`, title, abstract, PICO, and topic.
+- `study-search-screening.jsonl`: 100 review records with `Involved_Citations`; each citation can contain title, `pmid`, `doi`, `nctid`, and PDF link.
+- `data-extraction/*.csv`: 23 review-specific CSVs with heterogeneous columns and 632 rows. The public dataset viewer reports a schema-cast failure because files do not share one column schema.
+- No explicit `trial_family_id`, publication-thread identifier, or cross-review trial graph is present in the inspected release.
+
+### Evidence Inference 2.0 / MS²
+
+The prior study-level and review-level schemas remain historical feasibility probes. They do not acquire trial-family identity through this milestone.
+
+## Release rule
+
+A future v0.2 benchmark may release identifiers, hashes, transformations, labels, and linkage evidence while requiring users to rehydrate source text from authorized APIs. Raw full text and restricted records remain outside Git and outside any release until rights are verified.

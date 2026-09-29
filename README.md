@@ -4,7 +4,7 @@ TrialTrace studies whether clinical evidence-synthesis systems know when an evid
 
 ## Current status
 
-**Milestone 1 — REDESIGN_REQUIRED.** The data feasibility prototype executed successfully, but the current sources do not support the full multi-study TrialTrace benchmark. No model, training, or expensive experiment has been run.
+**Milestone 1R — PARTIAL_REDESIGN_REQUIRED.** TrialReviewBench provides a report-level review/question backbone, but ED-Trials trial-family linkage was not auditable at benchmark scale. No TrialTrace v0.2 labels, model, training, or expensive experiment has been run.
 
 ## Core decision
 

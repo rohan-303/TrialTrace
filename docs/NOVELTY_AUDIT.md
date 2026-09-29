@@ -117,3 +117,13 @@ This matrix is a design audit, not an exhaustive systematic review.
 2. Do not claim multi-study conflict, duplicate-report, or PICO-distractor support until independent trial-family and compatibility relations are obtained.
 3. Add an auditable source or human-verified subset with compatible multi-study evidence units and underlying trial identity.
 4. If that source cannot be obtained, narrow the project to study-level evidence sufficiency/abstention and explicitly drop conflict and duplicate-family claims.
+
+## Milestone 1R rescue closure
+
+The Epistemonikos/ED-Trials rescue audit did not establish trial-family-aware feasibility. The legacy API documents study-thread endpoints but requires a registered access token; unauthenticated requests returned HTTP 401. The current public frontend exposes a public references-search API and thread fields, but no stable, documented bulk linkage contract was frozen. No thread sample was therefore audited, and no thread ID was promoted to `trial_family_id`.
+
+TrialReviewBench was downloaded and measured at 100 review records, 2,220 included report records, 2,132 PMID-bearing records, 25 DOI-bearing records, 11 NCT-bearing records, 23 heterogeneous extraction files, and 632 extraction rows. It provides a useful report-level review/question backbone, but no explicit trial-family graph or common cross-review outcome ontology. The dataset already covers clinical evidence-synthesis search, screening, and extraction, so a future TrialTrace contribution must be narrower than a general evidence-synthesis benchmark.
+
+**Updated novelty statement:** a report-level benchmark for deterministic evidence-set perturbation and selective answerability may remain conditionally differentiated from TrialReviewBench, but the stronger claim involving audited independent trial families, duplicate-publication perturbations, and trial-family leakage control is not supported. No three-way labels, counterfactual pairs, or rescued prototype were generated in Milestone 1R.
+
+Source audit artifact: `artifacts/milestone_1r/20260929_source_rescue/trialreviewbench_audit.json` (ignored local artifact).

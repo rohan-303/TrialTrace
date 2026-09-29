@@ -1,0 +1,103 @@
+{
+  "project": "TrialTrace",
+  "manifest_type": "scientific_closeout_manifest",
+  "generated_at": "2026-09-29",
+  "final_pre_closeout_commit": "ff585aba9ed2f274a4b8935a533a7f061659888f",
+  "items": [
+    {
+      "path": "PROJECT_CLOSEOUT.md",
+      "bytes": 5717,
+      "sha256": "fa913a41325690ca77f379f09319cf1aa2b2adfde815e316a824bae20329efe9"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1254,
+      "sha256": "73cc77f5544dc91d4b720ffa3372f7417be0ce53873b7f4517274bc4b56481e0"
+    },
+    {
+      "path": "PROJECT_SPEC.md",
+      "bytes": 8826,
+      "sha256": "1b9fbd05470d52261456bad12b04380f9f2521f074fc445517d216079d1c9fed"
+    },
+    {
+      "path": "project_status.json",
+      "bytes": 584,
+      "sha256": "57c034458febfa3711356d54ca6439c6c1589b9eda8bb492e82aa03f320417f2"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 914,
+      "sha256": "36b27803235330aaf00ae637c262aa18aaddacaa698525e7eb503e1e48810d34"
+    },
+    {
+      "path": "docs/DATA_MANIFEST.md",
+      "bytes": 2126,
+      "sha256": "4a4f69fa7a389e59ff1ade074bba031b920230d7b48e6c7083484b76e6c11527"
+    },
+    {
+      "path": "docs/BENCHMARK_SCHEMA.md",
+      "bytes": 3845,
+      "sha256": "b7e3f15f9a031b3db0ab5fe03a0002adbc31d156026963984cc790d36c16ffa8"
+    },
+    {
+      "path": "docs/DATA_FEASIBILITY.md",
+      "bytes": 6904,
+      "sha256": "0441ee90a6918af34677d318b2478242d96f05742f99a324feefac0533b75125"
+    },
+    {
+      "path": "docs/LEAKAGE_AUDIT.md",
+      "bytes": 2237,
+      "sha256": "f2224b6c57725350eb56d8d3a1ee00579de28a0aee9e004ab7fb72ba8dcdcd8f"
+    },
+    {
+      "path": "docs/NOVELTY_AUDIT.md",
+      "bytes": 16093,
+      "sha256": "27b15fbc1155966df86b023c4da1d00dc3335bbb12a9d1a72afa3e8af066ee0d"
+    },
+    {
+      "path": "docs/PERTURBATION_SPEC.md",
+      "bytes": 1300,
+      "sha256": "68a9bb8a9ba007e25137bd073697f81a220bd163d8b1af5dd3600ff655f04a1b"
+    },
+    {
+      "path": "docs/ROADMAP_AND_GATES.md",
+      "bytes": 4560,
+      "sha256": "a727412ef44c5fe0d76dbd1cbb667658d79da9c2b57604b179ba35574c717d8e"
+    },
+    {
+      "path": "reports/MILESTONE_0_REPORT.md",
+      "bytes": 4721,
+      "sha256": "a80383287e8bf95244fe5607191ba370011418ebec155051329154308c9b117f"
+    },
+    {
+      "path": "reports/MILESTONE_1_REPORT.md",
+      "bytes": 10955,
+      "sha256": "0df056446359c9f95945652fa78b9808e5e3ffd0a753611b7442744163988b58"
+    },
+    {
+      "path": "reports/MILESTONE_1R_REPORT.md",
+      "bytes": 17327,
+      "sha256": "87e1d6ba3296813571968a016b873cf1d6858d89792c72ba1cf0b0e9d043732c"
+    },
+    {
+      "path": "reports/MILESTONE_1S_REPORT.md",
+      "bytes": 11251,
+      "sha256": "938da66015a2894c72ac0f147ac59f59bf84fe3af9291b28f7f962edc9df3c49"
+    },
+    {
+      "path": "scripts/audit_sources.py",
+      "bytes": 5776,
+      "sha256": "72d7cef061c4bf91f286c476a8515f7ba1420dad48ea69648cceb0baa6a5121e"
+    },
+    {
+      "path": "scripts/audit_rescue_sources.py",
+      "bytes": 5044,
+      "sha256": "8703de81abec0292c34e4f92a44907f1fbb6e6ba2cfe199a5684c8ac1b700113"
+    },
+    {
+      "path": "scripts/audit_conclusion_stability.py",
+      "bytes": 7944,
+      "sha256": "987c6058dbdf4b1f878f3ff9aaf6578704f7695aca461ba81fb5c21404ae2486"
+    }
+  ]
+}

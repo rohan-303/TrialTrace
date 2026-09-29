@@ -1,23 +1,29 @@
 # TrialTrace
 
-TrialTrace studies whether clinical evidence-synthesis systems know when an evidence set does **not** justify a conclusion.
+TrialTrace was a research exploration of whether clinical evidence-synthesis systems can recognize when missing, conflicting, duplicated, or PICO-incompatible evidence invalidates a conclusion.
 
-## Current status
+## Status
 
-**Milestone 1S — TRIALTRACE_STOP.** The final conclusion-stability kill-test found only three strict quantitative review/outcome units, one non-preserving counterfactual, and a perturbation-size shortcut that perfectly identified the only transition. No TrialTrace model, training, or expensive experiment was run.
+**`CLOSED — feasibility/data gate failed`**
 
-## Core decision
+The project stopped after Milestone 1S. The available publicly auditable data path did not support a publishable implementation under the project specification.
 
-The final tested formulation was paired review-level conclusion stability under controlled evidence-set shifts. It was stopped because the available TrialReviewBench release could not support a non-trivial benchmark.
+What was tested:
 
-## Repository rules
+- source and novelty feasibility;
+- MS² and Evidence Inference data limitations;
+- a multi-study rescue using TrialReviewBench and Epistemonikos/ED-Trials investigation;
+- deterministic review-level conclusion-stability recomputation and perturbation checks.
 
-- Do not download or process restricted medical data.
-- Do not overwrite frozen artifacts or scientific result directories.
-- Every future run gets a unique output directory and manifest.
-- Every claim must distinguish verified, executed, reproduced, validated, and not computed.
-- This is a research benchmark, not a clinical decision-support product.
+What remains:
 
-## Planned commands
+- historical milestone reports and negative results;
+- source-audit and conclusion-stability scripts;
+- reproducibility, schema, leakage, and gate documentation;
+- ignored local source artifacts and manifests where applicable.
 
-Implementation commands will be added only after Milestone 0 review and the data contract gate.
+No TrialTrace benchmark was released. No model, training run, GPU experiment, or clinical system was produced.
+
+## Research boundary
+
+TrialTrace was never a clinical decision-support product and makes no claims of clinical safety, treatment efficacy, clinician superiority, or validated medical utility.

@@ -1,0 +1,15 @@
+{
+  "project": "TrialTrace",
+  "project_status": "CLOSED",
+  "final_status": "PROJECT_CLOSED_AFTER_FEASIBILITY_FAILURE",
+  "closeout_date": "2026-09-29",
+  "final_milestone": "Milestone 1S — Review-Level Conclusion Stability Kill-Test",
+  "master_decision": "TRIALTRACE_STOP",
+  "final_commit_before_closeout": "ff585aba9ed2f274a4b8935a533a7f061659888f",
+  "publication_status": "NOT_SUBMITTED",
+  "benchmark_status": "NOT_RELEASED",
+  "model_status": "NOT_IMPLEMENTED",
+  "training_status": "NOT_RUN",
+  "gpu_experiment_status": "NOT_RUN",
+  "historical_reports_preserved": true
+}

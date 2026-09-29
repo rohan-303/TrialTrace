@@ -1,6 +1,6 @@
 # TrialTrace milestone roadmap and gates
 
-## Milestones
+## Historical milestones
 
 0. **Research specification and novelty kill-test** — complete the source-backed question, threat map, data feasibility preflight, hypotheses, and gates. No large experiments.
 1. **Data and benchmark construction** — acquire only eligible data, map relationships, audit trial families, implement deterministic perturbations, freeze Benchmark v0.1, and run leakage/label integrity checks.
@@ -11,7 +11,7 @@
 6. **Final scientific validation** — paired bootstrap intervals, ablations, reproducibility/artifact audit, and optional small human review subset.
 7. **Paper and release** — paper, figures/tables, benchmark docs, system cards, limitations/ethics, README, and reproducibility instructions.
 
-The sequence is retained. The only scope modification is that Milestone 1 must contain an explicit closest-benchmark replication/overlap audit before the benchmark is frozen.
+The sequence is historical and closed. Milestone 1S terminated the project before Milestone 2. The roadmap is retained to explain the intended path, not to schedule future work.
 
 ## Project-level gates
 
@@ -29,13 +29,13 @@ The sequence is retained. The only scope modification is that Milestone 1 must c
 
 ## Milestone 1 decision
 
-Milestone 1 executed a bounded EI feasibility prototype and closed the current branch as **REDESIGN_REQUIRED**. Do not begin Milestone 2. The minimum next step is a new data/label feasibility design that supplies audited multi-study compatible evidence and trial-family identities; otherwise narrow the project to study-level sufficiency/abstention and drop conflict/duplicate claims.
+Milestone 1 executed a bounded EI feasibility prototype and closed the initial design as **REDESIGN_REQUIRED**. Milestone 1R remained **PARTIAL_REDESIGN_REQUIRED**. Milestone 1S then closed the project as **TRIALTRACE_STOP**. Do not begin Milestone 2 or redesign this project.
 
 Milestone 0–1 compute: local CPU only for repository checks, metadata inspection, schema profiling, hashing, and deterministic tests. No remote GPU use was needed.
 
 Milestone 2 onward: use the authorized dual-RTX-4090 SSH server only after environment inspection and explicit compute authorization. Use one GPU unless parallelism is justified; record GPU/CUDA/model/precision/batch/memory metadata. Keep local repository authoritative, transfer only manifest-listed files, hash-check results on return, and delete only the user-created remote workspace. Never transfer credentials, private keys, restricted raw data, or model caches.
 
-## Risks most likely to kill publication value
+## Historical risks that killed publication value
 
 1. **Benchmark overlap:** MedSR-Bench or a related benchmark may already encode the same evidence-set robustness/answerability problem. This is the highest-priority kill test.
 2. **Trial identity and label validity:** publication-level metadata may not support underlying-trial deduplication or deterministic cross-study conflict labels. A benchmark that confuses reports with trials would be scientifically weak.

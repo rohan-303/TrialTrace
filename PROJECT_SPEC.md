@@ -2,7 +2,7 @@
 
 **Working title:** TrialTrace: Risk-Controlled Clinical Evidence Synthesis Under Missing, Conflicting, and PICO-Incompatible Evidence
 **Milestone:** 1S — Review-Level Conclusion Stability Kill-Test
-**Status:** TRIALTRACE_STOP; no model training or expensive experiments authorized.
+**Status:** `PROJECT_CLOSED_AFTER_FEASIBILITY_FAILURE`; no further model training, dataset acquisition, redesign, or experiments are authorized under this project.
 **Specification date:** 2026-09-29 (US/Eastern)
 
 ## 1. Scientific question
@@ -101,6 +101,6 @@ TrialTrace will not claim clinical safety, treatment efficacy, universal distrib
 
 The Milestone 1S audit tested a strict hazard-ratio subset of TrialReviewBench. It found three review/outcome units and one non-preserving multi-report omission pair. Leave-one-report-out perturbations produced no transitions, while a five-report omission produced the only transition and was perfectly identified by a perturbation-size rule. The quantitative, counterfactual, and non-triviality gates therefore fail. The current TrialTrace direction is stopped; no method-development milestone is authorized.
 
-## 12. Continuation decision
+## 12. Closeout boundary
 
-Milestone 0 ends with a conditional recommendation only if novelty and data gates survive source-backed review. Milestone 1 may begin only after external review of this specification and the Milestone 0 report. No full implementation, large data acquisition, model download, training, or GPU use is authorized by this document.
+The project is closed after Milestone 1S. Historical plans above remain part of the scientific record; they are not active work. Do not begin Milestone 2, method development, another dataset search, model benchmarking, or GPU execution within this repository. Any restart requires a new project proposal satisfying the conditions in `PROJECT_CLOSEOUT.md`.

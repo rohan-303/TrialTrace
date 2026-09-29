@@ -158,7 +158,12 @@ The TrialReviewBench source files remain ignored and outside Git. No restricted 
 
 ## GIT
 
-To be populated after final validation and commit.
+- Branch: `main`
+- Commit: `1b5c946` (`feat: test review-level conclusion stability`)
+- Remote: `https://github.com/rohan-303/TrialTrace.git`
+- Push: verified to `origin/main`
+- Tag: none
+- Worktree: clean after commit
 
 ## Risks
 
